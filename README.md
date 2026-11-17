@@ -42,6 +42,8 @@ Web is bound to localhost:9200. PostgreSQL has a persistent named volume and no 
 
 For public deployment, put the app behind HTTPS, set `ENVIRONMENT=production` and an exact HTTPS `BASE_URL`, keep PostgreSQL private, and use a generated operator key. This is a **single-operator service**, not a multi-tenant SaaS. It is not deployed automatically.
 
+For a hosted backend connected to a separate frontend, see [Deploy the backend to Render](docs/render.md).
+
 ## Real AI provider
 
 Set `OPENAI_API_KEY` in the server environment / protected `.env` and restart web and worker. `OPENAI_MODELS` is a comma-separated allowlist (default `gpt-4.1-mini`). The provider then appears in the evaluation form. Callers cannot select arbitrary upstream URLs or unconfigured model names.
